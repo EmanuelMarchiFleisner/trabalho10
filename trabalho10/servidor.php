@@ -13,7 +13,7 @@
 
 
 function consultaUsuario($usuario, $senha){ //function parameters, two variables.
-    $conn = new PDO('mysql:host=localhost;dbname=trabalho10','root', '');
+    $conn = new PDO('mysql:host=localhost;dbname=aulawebi','root', '');
     $stmt = $conn->prepare('SELECT *
                                       from usuarios
                                       where login = ' . $usuario .
