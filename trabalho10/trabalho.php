@@ -1,13 +1,12 @@
 <?php
 
+    SESSION_START ();
+    include 'servidor.php';
+}
 if (isset($_POST['logar'])) {
-    //select no usuario
-    //select *
-    //from usuarios
-    //where login = '123456'
-    //and password = md5('teste')
-    if (($_POST['login'] == 'admin')
-        && ($_POST['senha'] == 'admin')) {
+    if (consultaUsuario($_POST)
+
+    ) {
         $_SESSION['usuario'] = 'Emanuel Marchi Fleisner';
         echo '<a href="trabalho_sistema.php"> Accessar</a>';
     } else {
@@ -16,12 +15,16 @@ if (isset($_POST['logar'])) {
 }
 ?>
 
-<form method="post">
-    <input type="text" name="login"
-           Placeholder="login"/>
+<form method="POST">
+    <label>
+        <input type="text" name="login"
+              <?$_POST['login']?>
+    </label>
     <br>
-    <input type="password" name="senha"
-           Placeholder="senha"/>
+    <label>
+        <input type="password" name="senha"
+               <?$_POST['senha']?>
+    </label>
     <br>
     <input type="submit" name="login"/>
 </form>
