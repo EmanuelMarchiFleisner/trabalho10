@@ -1,8 +1,7 @@
 <?php
 
-    SESSION_START ();
     include 'servidor.php';
-}
+
 if (isset($_POST['logar'])) {
     if (consultaUsuario($_POST)
 
