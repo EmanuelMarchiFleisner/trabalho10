@@ -7,6 +7,7 @@ if (isset($_POST['logar'])) {
 
     ) {
         $_SESSION['usuario'] = 'Emanuel Marchi Fleisner';
+        $_SESSION['senha'] = '123';
         echo '<a href="trabalho_sistema.php"> Accessar</a>';
     } else {
         echo 'Login ou senha incorreto"';
